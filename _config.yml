@@ -1,0 +1,60 @@
+host: 0.0.0.0                                        
+lang: it-IT 
+title: 5pani2pesci
+#email: your-email@example.com
+description: >- 
+  Avventure di provvidenza quotidiana
+baseurl: ""
+url: "https://5p2p.it"
+social:
+  facebook: "5pani2pesci"
+  instagram: "5pani2pesci"
+  youtube: "5pani2pesci"
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .git
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+plugins:                                             
+  - jekyll-redirect-from      
+
+timezone: UTC
+collections:
+  home:
+  pages:
+    title: Pages
+    output: true
+    permalink: "/:title/"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true

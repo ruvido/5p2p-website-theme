@@ -1,0 +1,22 @@
+---
+title: "5pani2pesci - Avventure di Provvidenza Quotidiana"
+layout: home
+permalink: "/"                                   
+---
+{% for ele in site.home %}
+	{% if ele.slug == "order" %}
+		{% assign section_order = ele.order %}
+	{% endif %}
+{% endfor %}
+
+{% for sec in section_order %}
+	{% for ele in site.home %}
+		{% if ele.slug == sec %}
+
+			<div class="{{ele.class}}"> 
+							{{ele.content}}
+			</div>
+
+		{% endif %}
+	{% endfor %}
+{% endfor %}
